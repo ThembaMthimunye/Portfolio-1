@@ -1,32 +1,38 @@
 import React from "react";
 import Button from "../Component/Button";
 import Photo from "../assets/Pictures/ProfileImg.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const goToCv = () => {
+    navigate('/CV');
+  };
+
   return (
-    <section className="flex justify-center pl-[30rem] bg-black">
-      <div className="">
-        <img className="size-[30rem]" src={Photo} alt="" />
+    <section className="flex flex-col md:flex-row items-center justify-center bg-black p-8">
+      <div className="flex-shrink-0">
+        <img
+          className="w-80 h-80 object-cover   shadow-lg"
+          src={Photo}
+          alt="Profile"
+        />
       </div>
-      <div className="pl-[3rem] mt-[5rem]">
-        <h3 className="text-[#f50a0a] font-bold">Hello Im Themba</h3>
-        <h1 className="text-3xl text-white font-bold my-3">Tech Enthusiatic</h1>
-        <p className="text-gray-400 my-3 max-w-[40rem]">
+      <div className="mt-8 md:mt-0 md:ml-8 text-center md:text-left">
+        <h3 className="text-red-500 font-bold text-xl">Hello, I'm Themba</h3>
+        <h1 className="text-4xl text-white font-bold my-3">Tech Enthusiast</h1>
+        <p className="text-gray-400 my-3 max-w-lg mx-auto md:mx-0">
           I am Nicolas Themba Mthimunye, a Tshwane University of Technology
-          graduate with a degree in information technology (industrial
-          intelligence systems). I have a high degree of adaptability and find
-          it easy to fit in with new people and settings. My ability to think
-          analytically well enables me to recognise issues and develop workable
-          solutions. My ability to operate successfully and efficiently is
-          further enhanced by my proficiency with a variety of computer tools
-          and software. I also pick things up quickly and have a constant desire
-          to learn new things. I'm sure I can make a big difference in your
-          company's expansion and success with my drive for excellence. If given
-          the chance, I will put forth endless effort to make sure your company
-          meets its targets. I appreciate you taking a look at my
+          graduate with a degree in Information Technology (Industrial
+          Intelligence Systems). I am highly adaptable and easily fit into new
+          environments. My analytical skills help me identify problems and
+          devise effective solutions. Proficient with various computer tools
+          and software, I am eager to learn and continually improve. I am
+          confident in my ability to contribute to your company's growth and
+          success. Thank you for considering my application.
         </p>
-        <div className="my-10">
-          <Button label="ABOUT ME"></Button>
+        <div className="mt-6">
+          <Button onClick={goToCv} label="ABOUT ME" />
         </div>
       </div>
     </section>

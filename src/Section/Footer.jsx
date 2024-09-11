@@ -7,21 +7,13 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <section>
-      <div className="flex justify-around  font-serif font-bold  text-white bg-black mt-20">
+      <div className="flex justify-center  font-serif font-bold  text-white bg-black mt-20 ">
         <div>
-          <img className="size-[3rem] bg-cover" src={logo} alt="" />
+          <img className="size-[3rem] bg-cover" src={logo} alt=""  />
         </div>
-
-        <a href="">HOME</a>
-        <a href="">PROJECT</a>
-        <a href="">ABOUT</a>
-        <a href="">CONTACT</a>
-      </div>
-
-      <div className="flex justify-center ">
-      <FaGithub className="text-red-500 text-2xl my-10 ml-10" />
-      <FaTwitterSquare className="text-red-500  text-2xl my-10 ml-10"/>
-      <FaFacebook className="text-red-500  text-2xl my-10 ml-10"/>
+        <FaGithub className="text-red-500 text-2xl my-3 ml-10" />
+        <FaTwitterSquare className="text-red-500  text-2xl my-3 ml-10" />
+        <FaFacebook className="text-red-500  text-2xl my-3 ml-10" />
       </div>
     </section>
   );
